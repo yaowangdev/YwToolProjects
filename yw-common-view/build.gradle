@@ -31,9 +31,6 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    //日志
-    implementation 'com.orhanobut:logger:2.2.0'
-    //状态栏颜色
-    api 'com.readystatesoftware.systembartint:systembartint:1.0.3'
 
+    api project(':yw-common-lib')
 }
