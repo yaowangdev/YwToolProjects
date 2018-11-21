@@ -82,6 +82,11 @@ public class DisplayUtils {
     }
 
 
+    /**
+     * 当sdk>=21时，可设置状态栏颜色，实现沉浸式
+     * @param context
+     * @param color
+     */
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public static void setStatusBarTransparentLollipop(Context context, int color){
         Window window = ((Activity)context).getWindow();
@@ -93,6 +98,10 @@ public class DisplayUtils {
     }
 
 
+    /**
+     * 当sdk>=19是，可设置状态栏颜色，实现沉浸式
+     * @param context
+     */
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     public static void setStatusBarTransparent(Context context){
         Window win = ((Activity)context).getWindow();
