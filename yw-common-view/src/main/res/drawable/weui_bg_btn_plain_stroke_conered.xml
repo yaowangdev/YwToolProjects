@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false">
+        <shape
+               android:shape="rectangle" >
+            <solid android:color="#dfdfdf" />
+            <stroke android:color="@color/agmobile_btn_primary_solid_disabled" android:width="4px" />
+            <corners android:radius="@dimen/agmobile_tag_radius"/>
+        </shape>
+    </item>
+    <item android:state_pressed="true">
+        <shape
+            android:shape="rectangle" >
+            <solid android:color="#dbd9d9" />
+            <stroke android:color="@color/agmobile_btn_primary_solid_pressed" android:width="4px"/>
+            <corners android:radius="@dimen/agmobile_tag_radius"/>
+        </shape>
+    </item>
+    <item>
+        <shape
+            android:shape="rectangle" >
+            <solid android:color="#ffffff" />
+            <stroke android:color="@color/agmobile_btn_primary_solid_normal" android:width="4px"/>
+            <corners android:radius="@dimen/agmobile_tag_radius"/>
+        </shape>
+    </item>
+</selector>

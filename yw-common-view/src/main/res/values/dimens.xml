@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--________________________AGMobile________________________-->
+    <dimen name="top_icon_size">20dp</dimen><!--顶栏按钮图标大小-->
+    <dimen name="top_icon_padding">0dp</dimen><!--顶栏按钮图标Padding-->
+    <dimen name="top_icon_margin_horizontal">8dp</dimen><!--顶栏图标水平Margin-->
+    <dimen name="bottom_toggle_width">36dp</dimen>                <!--底部列表上拉图标宽度，建议使用@style/BottomToggleImageView-->
+    <dimen name="bottom_toggle_height">6dp</dimen>                <!--底部列表上拉图标高度-->
+    <dimen name="bottom_toggle_margin_vertical">6dp</dimen>       <!--底部列表上拉图标水平Margin-->
+    <dimen name="min_touchable_size">28dp</dimen><!--控件的最小可触控大小--><!--修改可触控大小从42dp改成36dp，因为图层列表的空间太小-->
+
+    <dimen name="list_symbol_size">6dp</dimen><!--列表项前面点点的大小-->
+    <dimen name="list_item_height">48dp</dimen><!--列表项高度，同时用于底部弹出框的标题栏高度-->
+    <dimen name="dialog_radius">3dp</dimen><!--对话框圆角-->
+
+    <!--______________________AGMobile end______________________-->
+
+
+    <!--顶部工具栏高度-->
+    <dimen name="agmobile_tool_bar_height">48dp</dimen>
+    <!--底部导航栏高度-->
+    <dimen name="agmobile_bottom_bar_height">53dp</dimen>
+    <!--表项高度-->
+    <dimen name="agmobile_list_item_height">48dp</dimen>
+    <!--标题-->
+    <dimen name="agmobile_text_title">18sp</dimen>
+    <!--正文、按钮文字-->
+    <dimen name="agmobile_text_body">16sp</dimen>
+    <!--正文附属-->
+    <dimen name="agmobile_text_body_sub">14sp</dimen>
+    <!--说明文字-->
+    <dimen name="agmobile_text_caption">13sp</dimen>
+    <!--数据上报列表文字-->
+    <dimen name="agmobile_text_caption_upload">12sp</dimen>
+    <!--边界水平间距-->
+    <dimen name="agmobile_boundary_spacing_horizontal">15dp</dimen>
+    <!--边界垂直间距-->
+    <dimen name="agmobile_boundary_spacing_vertical">15dp</dimen>
+    <!--按钮高度-->
+    <dimen name="agmobile_button_height">48dp</dimen>
+    <!--按钮圆角-->
+    <dimen name="agmobile_button_radius">3dp</dimen>
+    <!--按钮描边-->
+    <dimen name="agmobile_button_stroke">0px</dimen>
+    <!--统一屏幕水平间距-->
+    <dimen name="agmobile_all_spacing_horizontal">15dp</dimen>
+    <!--标签、按钮圆角-->
+    <dimen name="agmobile_tag_radius">22dp</dimen>
+</resources>

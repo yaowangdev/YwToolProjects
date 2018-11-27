@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item >
+        <shape
+               android:shape="rectangle" >
+            <corners android:radius="@dimen/agmobile_button_radius" />
+            <solid android:color="@color/agmobile_btn_default_solid_loading" />
+            <stroke android:color="@color/agmobile_btn_default_stroke_loading" android:width="2px" />
+        </shape>
+    </item>
+</selector>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--↓↓↓↓↓↓Deprecated 需要逐渐替换↓↓↓↓↓↓-->
+    <!--AGMobile设计统一颜色-->
+    <!--无特殊说明时，应用中的白色统一使用该颜色，包括：有内容（文字、列表）的背景色、暗底色上的文字、暗底色上的内容描边等-->
+    <color name="agmobile_white">#fffeff</color>        <!--新的UI中用fff-->
+    <!--无内容的背景色，作为底色用于体现空白及层次感，例如：图层查询中的背景、平板抽屉背景-->
+    <color name="agmobile_white_dark">#f6f6f9</color> <!--246,246,249-->
+    <!--半透明白色，目前用于暗底色上的按钮点击背景-->
+    <color name="agmobile_white_trans">#60fcfcfc</color>
+    <!--无特殊说明时，应用中的黑色统一使用该颜色，包括：亮底色上的文字颜色-->
+    <color name="agmobile_black">#565656</color>    <!--86,86,86-->
+    <!--半透明黑色，目前用于亮底色上的按钮点击背景-->
+    <color name="agmobile_black_trans">#50333333</color>
+    <!--全透明-->
+    <color name="transparent">#00000000</color>
+    <!--统一蓝色-->
+    <color name="agmobile_blue">#48b4ff</color>                 <!--72,180,255-->
+    <!--亮灰色，用于分割线、描边、输入框提示文字-->
+    <color name="agmobile_grey_0">#d3d3d3</color>               <!--193,193,193-->
+    <!--暗灰色，用于搜索框描边、搜索输入框文字-->
+    <color name="agmobile_grey_2">#4b4b4b</color>               <!--75,75,75-->
+    <!--↑↑↑↑↑↑Deprecated 需要逐渐替换↑↑↑↑↑↑-->
+
+    <!--主色调，如标题栏-->
+    <color name="agmobile_primary">#36a3f7</color>
+    <!--主色调暗，如状态栏-->
+    <color name="agmobile_primary_dark">#0E7BD0</color>
+    <!--突出色调，如文字按钮-->
+    <color name="agmobile_accent">#67a7d9</color>
+    <!--文字正文-->
+    <color name="agmobile_text_body">#333333</color>
+    <!--文字附属-->
+    <color name="agmobile_text_caption">#999999</color>
+    <!--文字tag-->
+    <color name="agmobile_text_tag">#888888</color>
+    <!--文字警告-->
+    <color name="agmobile_text_warn">#f04443</color>
+    <!--突出对比色-->
+    <color name="agmobile_contrast">#f39800</color>
+    <color name="agmobile_contrast_dark">#d78700</color>
+    <!--文字标题栏-->
+    <color name="agmobile_text_title_bar">#fff</color>
+    <!--分割线-->
+    <color name="agmobile_divider">#d6d6d6</color>
+    <!--分割线深色-->
+    <color name="agmobile_divider_dark">#191b1c</color>
+    <!--分割线标题栏-->
+    <color name="agmobile_divider_title_bar">#4aabf7</color>
+    <!--表层背景(控件、内容)-->
+    <color name="agmobile_surface">#ffffff</color>
+
+    <color name="agmobile_surface_alter">#EDF6FD</color>
+    <!--表层被按下时背景-->
+    <color name="agmobile_surface_pressed">#d9d9d9</color>
+    <!--底层背景(窗口底色)-->
+    <color name="agmobile_background">#f5f5f5</color>
+    <!--底栏背景色-->
+    <color name="agmobile_background_bottom_bar">#fcfcfc</color>
+    <!--网格卡片布局下的背景色-->
+    <color name="agmobile_background_grid">#f8f8f8</color>
+
+    <!--按钮-->
+    <!--主要按钮背景及描边-->
+    <!--填充色正常状态-->
+    <color name="agmobile_btn_primary_solid_normal">#36a3f7</color>
+    <!--填充色按下-->
+    <color name="agmobile_btn_primary_solid_pressed">#0E7BD0</color>
+    <!--填充色禁用-->
+    <color name="agmobile_btn_primary_solid_disabled">#7bbdf1</color>
+    <!--填充色加载中-->
+    <color name="agmobile_btn_primary_solid_loading">#197fce</color>
+    <!--描边色正常状态-->
+    <color name="agmobile_btn_primary_stroke_normal">#36a3f7</color>
+    <!--描边色按下-->
+    <color name="agmobile_btn_primary_stroke_pressed">#36a3f7</color>
+    <!--描边色禁用-->
+    <color name="agmobile_btn_primary_stroke_disabled">#36a3f7</color>
+    <!--描边色加载中-->
+    <color name="agmobile_btn_primary_stroke_loading">#36a3f7</color>
+
+    <!--默认按钮背景及描边-->
+    <color name="agmobile_btn_default_solid_normal">#f8f8f8</color>
+    <color name="agmobile_btn_default_solid_pressed">#dedede</color>
+    <color name="agmobile_btn_default_solid_disabled">#f7f7f7</color>
+    <color name="agmobile_btn_default_solid_loading">#f8f8f8</color>
+    <color name="agmobile_btn_default_stroke_normal">#c6c6c6</color>
+    <color name="agmobile_btn_default_stroke_pressed">#b2b2b2</color>
+    <color name="agmobile_btn_default_stroke_disabled">#c6c6c6</color>
+    <color name="agmobile_btn_default_stroke_loading">#b2b2b2</color>
+
+    <!--警告按钮背景及描边-->
+    <color name="agmobile_btn_warn_solid_normal">#f04443</color>
+    <color name="agmobile_btn_warn_solid_pressed">#d73d3c</color>
+    <color name="agmobile_btn_warn_solid_disabled">#f48b8a</color>
+    <color name="agmobile_btn_warn_solid_loading">#d73d3c</color>
+    <color name="agmobile_btn_warn_stroke_normal">#c03636</color>
+    <color name="agmobile_btn_warn_stroke_pressed">#ac3130</color>
+    <color name="agmobile_btn_warn_stroke_disabled">#c36f6e</color>
+    <color name="agmobile_btn_warn_stroke_loading">#ac3130</color>
+
+    <!--主要按钮文字各状态-->
+    <color name="agmobile_btn_primary_text_normal">#ffffff</color>
+    <color name="agmobile_btn_primary_text_pressed">#7bbdf1</color>
+    <color name="agmobile_btn_primary_text_disabled">#bdd6ea</color>
+    <color name="agmobile_btn_primary_text_loading">#bdd6ea</color>
+
+    <!--默认按钮文字各状态-->
+    <color name="agmobile_btn_default_text_normal">#353535</color>
+    <color name="agmobile_btn_default_text_pressed">#595959</color>
+    <color name="agmobile_btn_default_text_disabled">#acacac</color>
+    <color name="agmobile_btn_default_text_loading">#595959</color>
+
+    <!--警告按钮文字各状态-->
+    <color name="agmobile_btn_warn_text_normal">#ffffff</color>
+    <color name="agmobile_btn_warn_text_pressed">#efb1b1</color>
+    <color name="agmobile_btn_warn_text_disabled">#fbd1d0</color>
+    <color name="agmobile_btn_warn_text_loading">#efb1b1</color>
+    <!--按钮end-->
+
+    <!--对话框-->
+    <color name="agmobile_dialog_btn_positive">#36a3f7</color>
+    <color name="agmobile_dialog_btn_negative">#808080</color>
+    <color name="agmobile_dialog_btn_neutral">#808080</color>
+    <color name="agmobile_dialog_btn_disabled">#acacac</color>
+    <!--对话框end-->
+
+    <!--Switch-->
+    <color name="agmobile_switch_background_off">#999999</color>
+    <color name="agmobile_switch_background_on">#36a3f7</color>
+    <color name="agmobile_switch_ball">#ffffff</color>
+
+    <!--导航栏-->
+    <color name="agmobile_navi_tab_icon_normal">#999999</color>
+    <color name="agmobile_navi_tab_icon_selected">@color/agmobile_primary</color>
+</resources>

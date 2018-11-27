@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/top_bar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/agmobile_tool_bar_height"
+    android:background="@color/agmobile_primary">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="14dp"
+        android:layout_marginLeft="14dp"
+        tools:text="首页"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/agmobile_text_title" />
+
+
+    <!--再重叠一个做切换渐变效果-->
+    <TextView
+        android:id="@+id/tv_title_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="14dp"
+        android:layout_marginLeft="14dp"
+        tools:text="首页"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/agmobile_text_title"
+        android:alpha="0"/>
+
+    <LinearLayout
+        android:id="@+id/ll_actions"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="14dp"
+        android:layout_marginLeft="14dp"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:layout_toLeftOf="@+id/btn_more"
+        android:layout_toStartOf="@id/btn_more">
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:background="@drawable/cv_bg_btn_top"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:clickable="true"-->
+            <!--android:focusable="true"-->
+            <!--android:gravity="center" >-->
+
+            <!--<ImageView-->
+                <!--android:id="@+id/iv_icon"-->
+                <!--android:layout_width="28dp"-->
+                <!--android:layout_height="28dp"-->
+                <!--android:padding="4dp"-->
+                <!--android:layout_marginLeft="16dp"-->
+                <!--android:layout_marginRight="18dp"-->
+                <!--android:src="@drawable/cv_ic_search" />-->
+        <!--</LinearLayout>-->
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/btn_more"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/cv_bg_btn_top"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/iv_more"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="18dp"
+            android:padding="4dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/cv_ic_add"
+            android:visibility="gone"/>
+    </RelativeLayout>
+</RelativeLayout>

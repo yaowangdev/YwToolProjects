@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--导航栏Tab__navigation.NavigationTab-->
+    <declare-styleable name="NavigationTab">
+        <!--未选中状态图标-->
+        <attr format="reference" name="tabIconNormal"/>
+        <!--选中状态图标-->
+        <attr format="reference" name="tabIconSelected"/>
+        <!--标签文字-->
+        <attr format="string" name="tabText"/>
+        <!--文字大小-->
+        <attr format="dimension" name="tabTextSize"/>
+        <!--未选中状态颜色-->
+        <attr format="color" name="textColorNormal"/>
+        <!--选中状态颜色-->
+        <attr format="color" name="textColorSelected"/>
+        <!--角标背景颜色-->
+        <attr format="color" name="badgeBackgroundColor"/>
+        <!--图标文字padding-->
+        <attr format="dimension" name="paddingTexwithIcon"/>
+        <!--开启图标染色，默认不开启-->
+        <attr name="tintEnable" format="boolean"/>
+        <!--未选中状态图标染色 默认灰色-->
+        <attr name="tintNormal" format="color"/>
+        <!--选中状态图标染色 默认主色调-->
+        <attr name="tintSelected" format="color"/>
+    </declare-styleable>
+
+    <!--&lt;!&ndash;标题栏__TitleBar&ndash;&gt;-->
+    <!--<declare-styleable name="TitleBar2">-->
+        <!--&lt;!&ndash; 标题文案 &ndash;&gt;-->
+        <!--<attr name="titleText" format="string"/>-->
+        <!--&lt;!&ndash; 是否有back按钮 &ndash;&gt;-->
+        <!--<attr name="canBack" format="boolean"/>-->
+        <!--&lt;!&ndash; back按钮文案 &ndash;&gt;-->
+        <!--<attr name="backText" format="string"/>-->
+        <!--&lt;!&ndash; 右侧更多功能按钮图片 &ndash;&gt;-->
+        <!--<attr name="moreImg" format="reference"/>-->
+        <!--&lt;!&ndash; 右侧更多功能按钮文字 &ndash;&gt;-->
+        <!--<attr name="moreText" format="string"/>-->
+        <!--&lt;!&ndash; 是否显示更多功能按钮 &ndash;&gt;-->
+        <!--<attr name="showMore" format="string"/>-->
+        <!--&lt;!&ndash; 标题是否居中 &ndash;&gt;-->
+        <!--<attr name="centerTitle" format="boolean"/>-->
+        <!--&lt;!&ndash; 样式 dark 微信样式 light 白色 mini_program 小程序风格&ndash;&gt;-->
+        <!--<attr name="barStyle" format="enum">-->
+            <!--<enum name="dark" value="1"/>-->
+            <!--<enum name="light" value="2"/>-->
+            <!--<enum name="mini_program" value="3"/>-->
+        <!--</attr>-->
+    <!--</declare-styleable>-->
+
+
+    <!--自定义属性TitleBar-->
+    <declare-styleable name="TitleBar">
+        <!--标题名-->
+        <attr name="titleText" format="string"/>
+        <!--是否有返回按钮-->
+        <attr name="canBack" format="boolean"/>
+        <!--返回按钮文案-->
+        <attr name="backText" format="string"/>
+        <!--右侧更多功能图标-->
+        <attr name="moreImg" format="reference"/>
+        <!--右侧更多功能文案-->
+        <attr name="moreText" format="string"/>
+        <!--是否显示更多功能按钮-->
+        <attr name="showMore" format="boolean"/>
+        <!--标题名是否在正中-->
+        <attr name="centerTitle" format="boolean"/>
+        <!--titbar样式-->
+        <attr name="barStyle" format="enum">
+            <enum name="dark" value="1"/>
+        </attr>
+    </declare-styleable>
+
+
+
+    <!--抽屉控件__drawerlayout-->
+    <declare-styleable name="DrawerLayout">
+        <attr name="drawerToggleWidth" format="dimension"/>
+        <attr name="drawerDarkBackground" format="boolean"/>
+        <attr name="drawerPosition" format="enum">
+            <enum name="left" value="1"/>
+            <enum name="right" value="3"/>
+        </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="AMSpinner">
+        <attr name="spinnerLayout" format="reference"/>
+        <attr name="itemLayout" format="reference"/>
+        <attr name="windowLayout" format="reference"/>
+        <attr name="itemTextSize" format="dimension"/>
+        <attr name="isMultiFunction" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="AMMultiSpinner">
+        <attr name="multiSpinnerLayout" format="reference"/>
+        <attr name="multiItemLayout" format="reference"/>
+        <attr name="multiWindowLayout" format="reference"/>
+        <attr name="multiItemTextSize" format="dimension"/>
+    </declare-styleable>
+
+    <!--________________WEUI____________________-->
+
+    <!--共有属性-->
+    <!-- 名称 -->
+    <attr name="name" format="string"/>
+    <!-- 内容或当前状态 -->
+    <attr name="content" format="string"/>
+    <!-- 是否是列表中第一个 -->
+    <attr name="isTop" format="boolean"/>
+    <!-- 是否是列表中最后一个, 这两个属性用来控制分割线样式 -->
+    <attr name="isBottom" format="boolean"/>
+    <!-- 是否文本域 -->
+    <attr name="isTextArea" format="boolean"/>
+    <!--共有属性end-->
+
+    <!--WEUI按钮-->
+    <declare-styleable name="WEUIButton">
+        <!--按钮文字-->
+        <attr name="text" format="string"/>
+        <!--文字大小-->
+        <attr name="textSize" format="dimension"/>
+        <!--是否加载中-->
+        <attr name="loading" format="boolean"/>
+        <!--加载文字-->
+        <attr name="loadingText" format="string"/>
+        <!--可用状态-->
+        <attr name="enabled" format="boolean"/>
+        <!--定义背景后，buttonType将失效-->
+        <!--自定义背景,正常状态-->
+        <attr name="backgroundNormal" format="reference"/>
+        <!--自定义背景,加载状态-->
+        <attr name="backgroundLoading" format="reference"/>
+        <!--自定义文字颜色，正常状态-->
+        <attr name="textNormal" format="reference"/>
+        <!--自定义文字颜色，加载状态-->
+        <attr name="textLoading" format="reference"/>
+        <!--按钮类型-->
+        <attr name="buttonType" format="enum">
+            <enum name="primary" value="1"/>
+            <enum name="default_" value="2"/>
+            <enum name="warn" value="3"/>
+            <!--<enum name="plain" value="4"/>-->
+            <!--<enum name="plain_primary" value="5"/>-->
+        </attr>
+    </declare-styleable>
+
+    <!--WEUI列表项-->
+    <declare-styleable name="WEUICell">
+        <!-- 名称 -->
+        <attr name="name"/>
+        <!-- 名称颜色 -->
+        <attr name="nameColor" format="color"/>
+        <!-- 内容或当前状态 -->
+        <attr name="content"/>
+        <!-- 是否是列表中第一个 -->
+        <attr name="isTop"/>
+        <!-- 是否是列表中最后一个, 这两个属性用来控制分割线样式 -->
+        <attr name="isBottom"/>
+        <!-- 是否可以跳转 -->
+        <attr name="canNav" format="boolean"/>
+        <!-- 是否显示开关 -->
+        <attr name="showSwitch" format="boolean"/>
+        <!-- 是否文本域 -->
+        <attr name="isTextArea"/>
+        <!-- 图标 -->
+        <attr name="icon" format="reference" />
+    </declare-styleable>
+
+    <!--WEUI表单项-->
+    <declare-styleable name="WEUIInput">
+        <!--名称-->
+        <attr name="name"/>
+        <!--名称有效宽度-->
+        <attr name="nameEms" format="integer"/>
+        <!--内容-->
+        <attr name="content"/>
+        <!--输入提示-->
+        <attr name="hint"/>
+        <!--是否是列表中第一个-->
+        <attr name="isTop"/>
+        <!--是否是列表中最后一个, 这两个属性用来控制分割线样式-->
+        <attr name="isBottom"/>
+        <!--文字数量限制-->
+        <attr name="textLimit" format="integer"/>
+        <!--是否为必填项-->
+        <attr name="required" format="boolean"/>
+        <!--EditText输入类型-->
+        <attr name="inputType" format="enum">
+            <!--<enum name="text" value="0x00000001"/>-->
+            <!--<enum name="textPassword" value="0x00000080"/>-->
+        </attr>
+        <!--控件类型-->
+        <attr name="type" format="enum">
+            <!--文本输入-->
+            <enum name="text" value="1"/>
+            <!--区域文本输入-->
+            <enum name="textArea" value="2"/>
+            <!--&lt;!&ndash;列表单选&ndash;&gt;-->
+            <!--<enum name="singleSelection" value="3"/>-->
+            <!--&lt;!&ndash;列表多选&ndash;&gt;-->
+            <!--<enum name="multiSelection" value="4"/>-->
+        </attr>
+    </declare-styleable>
+
+    <!--WEUI Switch Button-->
+    <declare-styleable name="WEUISwitch">
+        <!--关闭状态背景色-->
+        <attr name="colorOff" format="color"/>
+        <!--开启状态背景色-->
+        <attr name="colorOn" format="color"/>
+        <!--圆点颜色-->
+        <attr name="colorBall" format="color"/>
+        <!--切换状态-->
+        <attr name="checked" format="boolean"/>
+    </declare-styleable>
+
+    <!--________________WEUI_end__________________-->
+
+</resources>
