@@ -6,6 +6,9 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 
 import com.appdev.common.lib.ui.DisplayUtils;
 import com.readystatesoftware.systembartint.SystemBarTintManager;
@@ -30,11 +33,11 @@ public class BaseActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mIntent = getIntent();
-        statusBarColor = mIntent.getIntExtra(STATUS_BAR_COLOR,Color.TRANSPARENT);
+        statusBarColor = mIntent.getIntExtra(STATUS_BAR_COLOR, Color.TRANSPARENT);
         tintManager = new SystemBarTintManager(this);
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            DisplayUtils.setStatusBarTransparentLollipop(this,statusBarColor);
-        }else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            DisplayUtils.setStatusBarTransparentLollipop(this, statusBarColor);
+        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             DisplayUtils.setStatusBarTransparent(this);
         }
         tintManager = new SystemBarTintManager(this);
