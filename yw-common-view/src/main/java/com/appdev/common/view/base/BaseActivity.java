@@ -23,7 +23,6 @@ import com.readystatesoftware.systembartint.SystemBarTintManager;
  * @modifyMemo 修改备注：
  */
 public class BaseActivity extends AppCompatActivity {
-    public static final String STATUS_BAR_COLOR = "status_bar_color";
     protected SystemBarTintManager tintManager;
     protected Intent mIntent;
     protected int statusBarColor;
@@ -33,7 +32,7 @@ public class BaseActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mIntent = getIntent();
-        statusBarColor = mIntent.getIntExtra(STATUS_BAR_COLOR, Color.TRANSPARENT);
+        statusBarColor = getStatusBar();
         tintManager = new SystemBarTintManager(this);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             DisplayUtils.setStatusBarTransparentLollipop(this, statusBarColor);
@@ -44,4 +43,9 @@ public class BaseActivity extends AppCompatActivity {
         tintManager.setStatusBarTintEnabled(true);
         tintManager.setTintColor(statusBarColor);//通知栏所需颜色
     }
+
+    protected int getStatusBar() {
+        return Color.TRANSPARENT;
+    }
+
 }
