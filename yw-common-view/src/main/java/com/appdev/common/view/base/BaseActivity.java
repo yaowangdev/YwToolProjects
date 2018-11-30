@@ -14,6 +14,8 @@ import com.appdev.common.lib.ui.DisplayUtils;
 import com.readystatesoftware.systembartint.SystemBarTintManager;
 
 /**
+ *
+ * 沉浸式BaseActivity
  * @author 创建人 ：yaowang
  * @version 1.0
  * @package 包名 ：com.appdev.common.view.base
@@ -22,7 +24,7 @@ import com.readystatesoftware.systembartint.SystemBarTintManager;
  * @modifyTime 修改时间 ：
  * @modifyMemo 修改备注：
  */
-public class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity extends AppCompatActivity {
     protected SystemBarTintManager tintManager;
     protected Intent mIntent;
     protected int statusBarColor;
@@ -31,8 +33,17 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(getLayoutView());
         mIntent = getIntent();
-        statusBarColor = getStatusBar();
+        statusBarColor = initStatusBar();
+        setStatusBarColor(statusBarColor);
+    }
+
+    protected int initStatusBar() {
+        return Color.TRANSPARENT;
+    }
+
+    protected void setStatusBarColor(int statusBarColor) {
         tintManager = new SystemBarTintManager(this);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             DisplayUtils.setStatusBarTransparentLollipop(this, statusBarColor);
@@ -44,8 +55,7 @@ public class BaseActivity extends AppCompatActivity {
         tintManager.setTintColor(statusBarColor);//通知栏所需颜色
     }
 
-    protected int getStatusBar() {
-        return Color.TRANSPARENT;
-    }
+
+    protected abstract int getLayoutView();
 
 }
