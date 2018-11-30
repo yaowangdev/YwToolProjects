@@ -11,7 +11,7 @@ public class BitmapUtils {
      * @param string
      * @return
      */
-    public static Bitmap stringTobitmap(String string){
+    public static Bitmap base64ToBitmap(String string){
         Bitmap bitmap = null;
         byte [] bitmapArray = Base64.decode(string,Base64.DEFAULT);
         bitmap = BitmapFactory.decodeByteArray(bitmapArray,0,bitmapArray.length);
