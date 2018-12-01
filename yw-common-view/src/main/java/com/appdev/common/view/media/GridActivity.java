@@ -10,6 +10,10 @@ public class GridActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_grid);
+    }
+
+    @Override
+    protected int getLayoutView() {
+        return R.layout.activity_grid;
     }
 }

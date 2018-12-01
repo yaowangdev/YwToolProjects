@@ -1,4 +1,4 @@
-package com.appdev.common.lib;
+package com.appdev.common.lib.time;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
