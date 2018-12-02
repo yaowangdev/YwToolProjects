@@ -16,4 +16,9 @@ public class GridActivity extends BaseActivity {
     protected int getLayoutView() {
         return R.layout.activity_grid;
     }
+
+    @Override
+    protected void initView() {
+
+    }
 }

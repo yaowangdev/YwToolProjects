@@ -15,4 +15,10 @@
         app:showMore="false"
         app:showBack="false"
         />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="dialog"
+        android:onClick="showDialog"/>
 </LinearLayout>
