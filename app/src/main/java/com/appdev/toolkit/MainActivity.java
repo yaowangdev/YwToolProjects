@@ -32,7 +32,7 @@ public class MainActivity extends BaseActivity {
                 .openCustom(true)
                 .setDimAmount(0.4f)
                 .setRatio(0.8f)
-                .setmBackgroundDrawable(R.drawable.agmobile_bg_popup_windowed)
+                .setBackgroundDrawable(R.drawable.agmobile_bg_popup_windowed)
 //                .setAnimation(R.style.DialogBaseAnimation)
                 .build()
                 .show(getSupportFragmentManager(),"confirmDialog");

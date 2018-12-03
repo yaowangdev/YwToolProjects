@@ -181,12 +181,12 @@ public abstract class BaseDialogFragment extends DialogFragment {
             return (T) this;
         }
 
-        public T setmBackgroundDrawable(int mBackgroundDrawable){
+        public T setBackgroundDrawable(int mBackgroundDrawable){
             this.mBackgroundDrawable = mBackgroundDrawable;
             return (T) this;
         }
 
-        public T setisTouchOutsideCancel(boolean isTouchOutsideCancel){
+        public T setTouchOutsideCancel(boolean isTouchOutsideCancel){
             this.isTouchOutsideCancel = isTouchOutsideCancel;
             return (T) this;
         }
