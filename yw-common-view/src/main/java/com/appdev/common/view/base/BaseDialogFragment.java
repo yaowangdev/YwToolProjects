@@ -99,7 +99,6 @@ public abstract class BaseDialogFragment extends DialogFragment {
                 wlp.width = WindowManager.LayoutParams.MATCH_PARENT;
                 wlp.height = WindowManager.LayoutParams.WRAP_CONTENT;
                 wlp.dimAmount = 0.4f;
-                window.setAttributes(wlp);
             }else {
                 // 透明背景
                 window.setBackgroundDrawableResource(mBackgroundDrawable);
