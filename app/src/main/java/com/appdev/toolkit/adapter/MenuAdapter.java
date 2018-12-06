@@ -3,7 +3,7 @@ package com.appdev.toolkit.adapter;
 import android.support.annotation.Nullable;
 
 import com.appdev.toolkit.R;
-import com.appdev.toolkit.entity.HomeItem;
+import com.appdev.toolkit.entity.MenuItem;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 
@@ -18,15 +18,15 @@ import java.util.List;
  * @modifyTime 修改时间 ：
  * @modifyMemo 修改备注：
  */
-public class HomeAdapter extends BaseQuickAdapter<HomeItem,BaseViewHolder> {
+public class MenuAdapter extends BaseQuickAdapter<MenuItem,BaseViewHolder> {
 
 
-    public HomeAdapter(int layoutResId, @Nullable List<HomeItem> data) {
+    public MenuAdapter(int layoutResId, @Nullable List<MenuItem> data) {
         super(layoutResId, data);
     }
 
     @Override
-    protected void convert(BaseViewHolder helper, HomeItem item) {
+    protected void convert(BaseViewHolder helper, MenuItem item) {
         helper.setText(R.id.tv_title,item.getTitle());
     }
 }

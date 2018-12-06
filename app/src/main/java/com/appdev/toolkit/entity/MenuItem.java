@@ -9,11 +9,11 @@ package com.appdev.toolkit.entity;
  * @modifyTime 修改时间 ：
  * @modifyMemo 修改备注：
  */
-public class HomeItem {
+public class MenuItem {
     private Class<?> activity;
     private String title;
 
-    public HomeItem(Class<?> activity, String title) {
+    public MenuItem(Class<?> activity, String title) {
         this.activity = activity;
         this.title = title;
     }

@@ -1,15 +1,24 @@
 package com.appdev.toolkit.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.view.Gravity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.appdev.common.view.base.BaseActivity;
-import com.appdev.common.view.dialog.ConfirmDialog;
 import com.appdev.common.view.navigation.TitleBar;
 import com.appdev.toolkit.MainActivity;
 import com.appdev.toolkit.R;
+import com.appdev.toolkit.adapter.MenuAdapter;
+import com.appdev.toolkit.entity.MenuItem;
+import com.chad.library.adapter.base.BaseQuickAdapter;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import static com.appdev.toolkit.MainActivity.MAIN_EXTRA_TITLE;
 
 /**
  * @author 创建人 ：yaowang
@@ -22,6 +31,9 @@ import com.appdev.toolkit.R;
  */
 public class DialogDemoActivity extends BaseActivity {
     private TitleBar mTitleBar;
+    private RecyclerView mRecyclerView;
+    private MenuAdapter mMenuAdapter;
+    private List<MenuItem> mItems = new ArrayList<>();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -35,20 +47,36 @@ public class DialogDemoActivity extends BaseActivity {
 
     @Override
     protected void initView() {
+        mRecyclerView = findViewById(R.id.rv_recyclerView);
+        mItems = getData();
         mTitleBar = findViewById(R.id.titleBar);
-        mTitleBar.setTitleText(mIntent.getStringExtra(MainActivity.MAIN_EXTRA_TITLE));
+        mTitleBar.setTitleText(mIntent.getStringExtra(MAIN_EXTRA_TITLE));
+        mMenuAdapter = new MenuAdapter(R.layout.item_menu_view,mItems);
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        mRecyclerView.setHasFixedSize(true);
+        mRecyclerView.setAdapter(mMenuAdapter);
+        mMenuAdapter.setOnItemClickListener((adapter, view, position) -> {
+            Intent intent = new Intent(DialogDemoActivity.this,((MenuAdapter)adapter).getData().get(position).getActivity());
+            intent.putExtra(MAIN_EXTRA_TITLE,((MenuAdapter)adapter).getData().get(position).getTitle());
+            startActivity(intent);
+        });
     }
 
-    public void Confirm(View v){
-        ConfirmDialog.newConfirmBuilder()
-                .openCustom(true)
-                .setLeftText("取消")
-                .setRightText("确定")
-                .setTitle("提示窗口")
-                .setMessage("消息内容")
-                .setGravity(Gravity.CENTER)
-                .setDimAmount(0.3f)
-                .build()
-                .show(getSupportFragmentManager(),"dialog1");
+    private List<MenuItem> getData() {
+        mItems.add(new MenuItem(CommentReplyActivity.class,"评论回复"));
+        return mItems;
     }
+
+//    public void Confirm(View v){
+//        ConfirmDialog.newConfirmBuilder()
+//                .openCustom(true)
+//                .setLeftText("取消")
+//                .setRightText("确定")
+//                .setTitle("提示窗口")
+//                .setMessage("消息内容")
+//                .setGravity(Gravity.CENTER)
+//                .setDimAmount(0.3f)
+//                .build()
+//                .show(getSupportFragmentManager(),"dialog1");
+//    }
 }

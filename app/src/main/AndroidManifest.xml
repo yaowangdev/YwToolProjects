@@ -19,6 +19,8 @@
         </activity>
         <activity android:name=".activity.DialogDemoActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".activity.CommentReplyActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
