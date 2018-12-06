@@ -131,4 +131,8 @@ public class TitleBar extends RelativeLayout {
     public void setMoreButtonAction(OnClickListener listener) {
         llMoreBtn.setOnClickListener(listener);
     }
+
+    public void setTitleText(String titleText){
+        this.tvTitle.setText(titleText);
+    }
 }

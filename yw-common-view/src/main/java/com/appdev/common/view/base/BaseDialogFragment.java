@@ -18,6 +18,19 @@ import com.appdev.common.lib.ui.DisplayUtils;
 import com.appdev.common.view.R;
 
 public abstract class BaseDialogFragment extends DialogFragment {
+    private static final String DIALOG_WIDTH = "dialog_width";
+    private static final String DIALOG_HEIGHT = "dialog_height";
+    private static final String DIALOG_GRAVITY = "dialog_gravity";
+    private static final String DIALOG_OFFSET_X = "dialog_offset_x";
+    private static final String DIALOG_OFFSET_Y = "dialog_offset_y";
+    private static final String DIALOG_ANIMATION = "dialog_animation";
+    private static final String DIALOG_THEME = "dialog_theme";
+    private static final String DIALOG_RATIO = "dialog_ratio";
+    private static final String DIALOG_DIM_AMOUNT = "dialog_dim_amount";
+    private static final String DIALOG_BACKGROUND_DRAWABLE = "dialog_background_drawable";
+    private static final String DIALOG_TOUCH_OUTSIDE_CANCEL = "dialog_touch_outside_cancel";
+    private static final String DIALOG_CANCELABLE = "dialog_cancel";
+    private static final String DIALOG_OPEN_CUSTOM = "dialog_open_custom";
 
     private int mWidth = WindowManager.LayoutParams.MATCH_PARENT;
     private int mHeight = WindowManager.LayoutParams.WRAP_CONTENT;
@@ -37,19 +50,19 @@ public abstract class BaseDialogFragment extends DialogFragment {
 
     protected static Bundle getArgumentBundle(Builder b) {
         Bundle bundle = new Bundle();
-        bundle.putInt("mWidth", b.mWidth);
-        bundle.putInt("mHeight", b.mHeight);
-        bundle.putInt("mGravity", b.mGravity);
-        bundle.putInt("mOffsetX", b.mOffsetX);
-        bundle.putInt("mOffsetY", b.mOffsetY);
-        bundle.putInt("mAnimation", b.mAnimation);
-        bundle.putInt("mTheme", b.mTheme);
-        bundle.putFloat("mRatio", b.mRatio);
-        bundle.putFloat("mDimAmount", b.mDimAmount);
-        bundle.putInt("mBackgroundDrawable", b.mBackgroundDrawable);
-        bundle.putBoolean("isTouchOutsideCancel",b.isTouchOutsideCancel);
-        bundle.putBoolean("isCancelable",b.isCancelable);
-        bundle.putBoolean("openCustom",b.openCustom);
+        bundle.putInt(DIALOG_WIDTH, b.mWidth);
+        bundle.putInt(DIALOG_HEIGHT, b.mHeight);
+        bundle.putInt(DIALOG_GRAVITY, b.mGravity);
+        bundle.putInt(DIALOG_OFFSET_X, b.mOffsetX);
+        bundle.putInt(DIALOG_OFFSET_Y, b.mOffsetY);
+        bundle.putInt(DIALOG_ANIMATION, b.mAnimation);
+        bundle.putInt(DIALOG_THEME, b.mTheme);
+        bundle.putFloat(DIALOG_RATIO, b.mRatio);
+        bundle.putFloat(DIALOG_DIM_AMOUNT, b.mDimAmount);
+        bundle.putInt(DIALOG_BACKGROUND_DRAWABLE, b.mBackgroundDrawable);
+        bundle.putBoolean(DIALOG_TOUCH_OUTSIDE_CANCEL,b.isTouchOutsideCancel);
+        bundle.putBoolean(DIALOG_CANCELABLE,b.isCancelable);
+        bundle.putBoolean(DIALOG_OPEN_CUSTOM,b.openCustom);
         return bundle;
     }
 
@@ -58,19 +71,19 @@ public abstract class BaseDialogFragment extends DialogFragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mWidth = getArguments().getInt("mWidth",WindowManager.LayoutParams.MATCH_PARENT);
-            mHeight = getArguments().getInt("mHeight",WindowManager.LayoutParams.WRAP_CONTENT);
-            mOffsetX = getArguments().getInt("mOffsetX",0);
-            mOffsetY = getArguments().getInt("mOffsetY",0);
-            mAnimation = getArguments().getInt("mAnimation",R.style.DialogBaseAnimation);
-            mGravity = getArguments().getInt("mGravity",Gravity.BOTTOM);
-            mTheme = getArguments().getInt("mTheme",R.style.CustomDialog);
-            mRatio = getArguments().getFloat("mRatio",0);
-            mDimAmount = getArguments().getFloat("mDimAmount",0);
-            mBackgroundDrawable = getArguments().getInt("mBackgroundDrawable", R.color.transparent);
-            isTouchOutsideCancel = getArguments().getBoolean("isTouchOutsideCancel", true);
-            isCancelable = getArguments().getBoolean("isCancelable", true);
-            openCustom = getArguments().getBoolean("openCustom", false);
+            mWidth = getArguments().getInt(DIALOG_WIDTH,WindowManager.LayoutParams.MATCH_PARENT);
+            mHeight = getArguments().getInt(DIALOG_HEIGHT,WindowManager.LayoutParams.WRAP_CONTENT);
+            mGravity = getArguments().getInt(DIALOG_GRAVITY,Gravity.BOTTOM);
+            mOffsetX = getArguments().getInt(DIALOG_OFFSET_X,0);
+            mOffsetY = getArguments().getInt(DIALOG_OFFSET_Y,0);
+            mAnimation = getArguments().getInt(DIALOG_ANIMATION,R.style.DialogBaseAnimation);
+            mTheme = getArguments().getInt(DIALOG_THEME,R.style.CustomDialog);
+            mRatio = getArguments().getFloat(DIALOG_RATIO,0);
+            mDimAmount = getArguments().getFloat(DIALOG_DIM_AMOUNT,0);
+            mBackgroundDrawable = getArguments().getInt(DIALOG_BACKGROUND_DRAWABLE, R.color.transparent);
+            isTouchOutsideCancel = getArguments().getBoolean(DIALOG_TOUCH_OUTSIDE_CANCEL, true);
+            isCancelable = getArguments().getBoolean(DIALOG_CANCELABLE, true);
+            openCustom = getArguments().getBoolean(DIALOG_OPEN_CUSTOM, false);
         }
     }
 

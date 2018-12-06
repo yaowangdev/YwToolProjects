@@ -1,12 +1,23 @@
 package com.appdev.toolkit;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 
 import com.appdev.common.view.base.BaseActivity;
-import com.appdev.common.view.dialog.ConfirmDialog;
+import com.appdev.toolkit.activity.DialogDemoActivity;
+import com.appdev.toolkit.adapter.HomeAdapter;
+import com.appdev.toolkit.entity.HomeItem;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends BaseActivity {
+    public static final String MAIN_EXTRA_TITLE = "extra_title";
+    private RecyclerView mRecyclerView;
+    private HomeAdapter mHomeAdapter;
+    private List<HomeItem> mItems = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,21 +31,21 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initView() {
-
+        mRecyclerView = findViewById(R.id.rv_recyclerView);
+        mItems = getData();
+        mHomeAdapter = new HomeAdapter(R.layout.item_home_view,mItems);
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        mRecyclerView.setHasFixedSize(true);
+        mRecyclerView.setAdapter(mHomeAdapter);
+        mHomeAdapter.setOnItemClickListener((adapter, view, position) -> {
+            Intent intent = new Intent(MainActivity.this,((HomeAdapter)adapter).getData().get(position).getActivity());
+            intent.putExtra(MAIN_EXTRA_TITLE,((HomeAdapter)adapter).getData().get(position).getTitle());
+            startActivity(intent);
+        });
     }
 
-    public void showDialog(View view) {
-        ConfirmDialog.newConfirmBuilder()
-                .setLeftText("取消")
-                .setRightText("确定")
-                .setTitle("消息标题")
-                .setMessage("消息内容")
-                .openCustom(true)
-                .setDimAmount(0.4f)
-                .setRatio(0.8f)
-                .setBackgroundDrawable(R.drawable.agmobile_bg_popup_windowed)
-//                .setAnimation(R.style.DialogBaseAnimation)
-                .build()
-                .show(getSupportFragmentManager(),"confirmDialog");
+    private List<HomeItem> getData() {
+        mItems.add(new HomeItem(DialogDemoActivity.class,"DialogFragment案例"));
+        return mItems;
     }
 }

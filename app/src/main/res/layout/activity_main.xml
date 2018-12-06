@@ -15,10 +15,8 @@
         app:showMore="false"
         app:showBack="false"
         />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="dialog"
-        android:onClick="showDialog"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 </LinearLayout>
