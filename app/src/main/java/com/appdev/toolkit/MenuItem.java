@@ -1,4 +1,4 @@
-package com.appdev.toolkit.entity;
+package com.appdev.toolkit;
 
 /**
  * @author 创建人 ：yaowang

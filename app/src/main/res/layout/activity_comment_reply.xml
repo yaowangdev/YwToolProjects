@@ -1,15 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/agmobile_background"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <com.appdev.common.view.navigation.TitleBar
+        android:background="@color/agmobile_white"
         android:id="@+id/titleBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:barStyle="centerBar"
         app:showBack="true"
-        />
+        android:elevation="6dp"
+        tools:targetApi="lollipop" />
 
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/agmobile_white"
+        android:elevation="8dp"
+        tools:targetApi="lollipop">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/img_avatar"/>
+
+        <TextView
+            android:id="@+id/tv_comment_fake_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="添加评论..."
+            android:textColorHint="@color/agmobile_grey_0"
+            android:textColor="@color/agmobile_grey_2"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,9 +1,7 @@
-package com.appdev.toolkit.adapter;
+package com.appdev.toolkit;
 
 import android.support.annotation.Nullable;
 
-import com.appdev.toolkit.R;
-import com.appdev.toolkit.entity.MenuItem;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 

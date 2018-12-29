@@ -8,13 +8,15 @@
     tools:context=".MainActivity">
 
     <com.appdev.common.view.navigation.TitleBar
+        android:background="@color/agmobile_white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:barStyle="centerBar"
         app:titleText="功能大全"
         app:showMore="false"
         app:showBack="false"
-        />
+        android:elevation="6dp"
+        tools:targetApi="lollipop" />
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_recyclerView"
         android:layout_width="match_parent"

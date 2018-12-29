@@ -6,9 +6,6 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.appdev.common.view.base.BaseActivity;
-import com.appdev.toolkit.activity.DialogDemoActivity;
-import com.appdev.toolkit.adapter.MenuAdapter;
-import com.appdev.toolkit.entity.MenuItem;
 
 import java.util.ArrayList;
 import java.util.List;

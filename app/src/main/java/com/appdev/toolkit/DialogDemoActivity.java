@@ -1,19 +1,13 @@
-package com.appdev.toolkit.activity;
+package com.appdev.toolkit;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.View;
 
 import com.appdev.common.view.base.BaseActivity;
 import com.appdev.common.view.navigation.TitleBar;
-import com.appdev.toolkit.MainActivity;
-import com.appdev.toolkit.R;
-import com.appdev.toolkit.adapter.MenuAdapter;
-import com.appdev.toolkit.entity.MenuItem;
-import com.chad.library.adapter.base.BaseQuickAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
