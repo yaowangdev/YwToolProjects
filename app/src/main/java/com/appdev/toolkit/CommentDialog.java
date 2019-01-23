@@ -1,6 +1,5 @@
 package com.appdev.toolkit;
 
-import android.app.ListActivity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.Color;
