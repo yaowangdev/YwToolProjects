@@ -143,7 +143,7 @@ public class CommentDialog extends BaseDialogFragment implements View.OnClickLis
 
     public void setKeyboardHeight(int keyboardHeight){
         this.keyboardHeight = keyboardHeight;
-        if(count==0){
+//        if(count==0){
             linearLayout = new LinearLayout(getContext());
             LinearLayout.LayoutParams llParams = new LinearLayout.LayoutParams(
                     ViewGroup.LayoutParams.MATCH_PARENT,
@@ -161,8 +161,25 @@ public class CommentDialog extends BaseDialogFragment implements View.OnClickLis
             );
             textView.setLayoutParams(tvParams);
             linearLayout.addView(textView);
+            flContainer.addView(linearLayout);
+//        }else {
+//            TextView textView = new TextView(getContext());
+//            textView.setText("Hello");
+//            textView.setTextColor(Color.BLACK);
+//            ViewGroup.LayoutParams tvParams = new ViewGroup.LayoutParams(
+//                    ViewGroup.LayoutParams.WRAP_CONTENT,
+//                    ViewGroup.LayoutParams.WRAP_CONTENT
+//            );
+//            textView.setLayoutParams(tvParams);
+//            linearLayout.addView(textView);
+//        }
+//        count++;
+    }
+
+    public void removeImageView(){
+        if(flContainer!=null){
+            flContainer.removeAllViews();
         }
-        count++;
     }
 
 
@@ -171,8 +188,6 @@ public class CommentDialog extends BaseDialogFragment implements View.OnClickLis
         switch (v.getId()){
             case R.id.image_btn_photo:
                 dataCallback.onImageClick();
-                KeyboardUtils.hideSoftInput(getActivity());
-                flContainer.addView(linearLayout);
                 break;
             case R.id.image_btn_at:
                 dataCallback.onAtClick();

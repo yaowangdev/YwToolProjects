@@ -1,21 +1,17 @@
 package com.appdev.toolkit;
 
-import android.graphics.Color;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.Gravity;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.ViewTreeObserver;
-import android.widget.FrameLayout;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.appdev.common.lib.log.LogUtils;
 import com.appdev.common.lib.toast.ToastUtils;
 import com.appdev.common.lib.ui.DisplayUtils;
+import com.appdev.common.lib.ui.KeyboardUtils;
 import com.appdev.common.view.base.BaseActivity;
 import com.appdev.common.view.navigation.TitleBar;
 
@@ -28,6 +24,7 @@ public class CommentReplyActivity extends BaseActivity implements DialogFragment
     private int keyboardHeight;
     private CommentDialog commentDialog;
 
+    private boolean isKeyboardShow;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,6 +57,18 @@ public class CommentReplyActivity extends BaseActivity implements DialogFragment
                 keyboardHeight = heightDiff;
             }
         });
+
+        KeyboardUtils.setListener(this, new KeyboardUtils.OnKeyboardListener() {
+            @Override
+            public void onKeyboardShow(int i) {
+                isKeyboardShow = true;
+            }
+
+            @Override
+            public void onKeyboardHide(int i) {
+                isKeyboardShow = false;
+            }
+        });
     }
 
     @Override
@@ -74,7 +83,13 @@ public class CommentReplyActivity extends BaseActivity implements DialogFragment
 
     @Override
     public void onImageClick() {
-        commentDialog.setKeyboardHeight(keyboardHeight);
+        if(!isKeyboardShow){
+            KeyboardUtils.showSoftInputUsingToggle(this);
+            commentDialog.removeImageView();
+        }else {
+            commentDialog.setKeyboardHeight(keyboardHeight);
+            KeyboardUtils.hideSoftInputUsingToggle(this);
+        }
     }
 
     @Override
