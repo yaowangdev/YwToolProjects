@@ -108,7 +108,6 @@ public abstract class BaseDialogFragment extends DialogFragment {
         mDialog.setCancelable(isCancelable);
         if (window != null) {
             WindowManager.LayoutParams wlp = window.getAttributes();
-            window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN | WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
             if(!openCustom){
                 wlp.width = WindowManager.LayoutParams.MATCH_PARENT;
                 wlp.height = WindowManager.LayoutParams.WRAP_CONTENT;

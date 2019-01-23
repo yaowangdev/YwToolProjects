@@ -215,12 +215,18 @@ public class CommentDialog extends BaseDialogFragment implements View.OnClickLis
     @Override
     public void onDismiss(DialogInterface dialog) {
         dataCallback.setCommentText(etAddComment.getText().toString());
+        etAddComment.setFocusable(false);
+        etAddComment.setFocusableInTouchMode(false);
+        KeyboardUtils.hideSoftInputUsingToggle(getActivity());
         super.onDismiss(dialog);
     }
 
     @Override
     public void onCancel(DialogInterface dialog) {
         dataCallback.setCommentText(etAddComment.getText().toString());
+        etAddComment.setFocusable(false);
+        etAddComment.setFocusableInTouchMode(false);
+        KeyboardUtils.hideSoftInputUsingToggle(getActivity());
         super.onCancel(dialog);
     }
 }
