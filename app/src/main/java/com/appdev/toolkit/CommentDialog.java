@@ -20,7 +20,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.appdev.common.lib.toast.ToastUtils;
-import com.appdev.common.lib.ui.KeyboardUtils;
 import com.appdev.common.view.base.BaseDialogFragment;
 
 /**
@@ -40,8 +39,6 @@ public class CommentDialog extends BaseDialogFragment implements View.OnClickLis
     private FrameLayout flContainer;
     private InputMethodManager inputMethodManager;
     private DialogFragmentDataCallback dataCallback;
-    private int keyboardHeight;
-    private int count;
     private LinearLayout linearLayout;
 
     @Override
@@ -142,38 +139,24 @@ public class CommentDialog extends BaseDialogFragment implements View.OnClickLis
     }
 
     public void setKeyboardHeight(int keyboardHeight){
-        this.keyboardHeight = keyboardHeight;
-//        if(count==0){
-            linearLayout = new LinearLayout(getContext());
-            LinearLayout.LayoutParams llParams = new LinearLayout.LayoutParams(
-                    ViewGroup.LayoutParams.MATCH_PARENT,
-                    keyboardHeight
-            );
-            linearLayout.setLayoutParams(llParams);
-            linearLayout.setGravity(Gravity.CENTER);
+        linearLayout = new LinearLayout(getContext());
+        LinearLayout.LayoutParams llParams = new LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                keyboardHeight
+        );
+        linearLayout.setLayoutParams(llParams);
+        linearLayout.setGravity(Gravity.CENTER);
 
-            TextView textView = new TextView(getContext());
-            textView.setText("Hello");
-            textView.setTextColor(Color.BLACK);
-            ViewGroup.LayoutParams tvParams = new ViewGroup.LayoutParams(
-                    ViewGroup.LayoutParams.WRAP_CONTENT,
-                    ViewGroup.LayoutParams.WRAP_CONTENT
-            );
-            textView.setLayoutParams(tvParams);
-            linearLayout.addView(textView);
-            flContainer.addView(linearLayout);
-//        }else {
-//            TextView textView = new TextView(getContext());
-//            textView.setText("Hello");
-//            textView.setTextColor(Color.BLACK);
-//            ViewGroup.LayoutParams tvParams = new ViewGroup.LayoutParams(
-//                    ViewGroup.LayoutParams.WRAP_CONTENT,
-//                    ViewGroup.LayoutParams.WRAP_CONTENT
-//            );
-//            textView.setLayoutParams(tvParams);
-//            linearLayout.addView(textView);
-//        }
-//        count++;
+        TextView textView = new TextView(getContext());
+        textView.setText("Hello");
+        textView.setTextColor(Color.BLACK);
+        ViewGroup.LayoutParams tvParams = new ViewGroup.LayoutParams(
+                ViewGroup.LayoutParams.WRAP_CONTENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT
+        );
+        textView.setLayoutParams(tvParams);
+        linearLayout.addView(textView);
+        flContainer.addView(linearLayout);
     }
 
     public void removeImageView(){
@@ -215,18 +198,12 @@ public class CommentDialog extends BaseDialogFragment implements View.OnClickLis
     @Override
     public void onDismiss(DialogInterface dialog) {
         dataCallback.setCommentText(etAddComment.getText().toString());
-        etAddComment.setFocusable(false);
-        etAddComment.setFocusableInTouchMode(false);
-        KeyboardUtils.hideSoftInputUsingToggle(getActivity());
         super.onDismiss(dialog);
     }
 
     @Override
     public void onCancel(DialogInterface dialog) {
         dataCallback.setCommentText(etAddComment.getText().toString());
-        etAddComment.setFocusable(false);
-        etAddComment.setFocusableInTouchMode(false);
-        KeyboardUtils.hideSoftInputUsingToggle(getActivity());
         super.onCancel(dialog);
     }
 }

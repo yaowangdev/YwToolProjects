@@ -1,6 +1,5 @@
 package com.appdev.toolkit;
 
-import android.graphics.Rect;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.Gravity;
@@ -8,9 +7,7 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.appdev.common.lib.log.LogUtils;
 import com.appdev.common.lib.toast.ToastUtils;
-import com.appdev.common.lib.ui.DisplayUtils;
 import com.appdev.common.lib.ui.KeyboardUtils;
 import com.appdev.common.view.base.BaseActivity;
 import com.appdev.common.view.navigation.TitleBar;
@@ -42,26 +39,27 @@ public class CommentReplyActivity extends BaseActivity implements DialogFragment
         tvCommentBtn = findViewById(R.id.tv_comment_fake_button);
         mTitleBar.setTitleText(mIntent.getStringExtra(MAIN_EXTRA_TITLE));
         tvCommentBtn.setOnClickListener(this);
-        rlParent.getViewTreeObserver().addOnGlobalLayoutListener(() -> {
-            ToastUtils.shortToast(CommentReplyActivity.this,"haha");
-            Rect r = new Rect();
-            rlParent.getWindowVisibleDisplayFrame(r);
-            LogUtils.d("yaowang","rTop="+r.top);
-            LogUtils.d("yaowang","rBottom="+r.bottom);
-            LogUtils.d("yaowang","statusHeight="+ DisplayUtils.getStatusHeight(CommentReplyActivity.this));
-            LogUtils.d("yaowang","screenHeight="+ DisplayUtils.getDisplayHeight(CommentReplyActivity.this));
-            int screenHeight = DisplayUtils.getDisplayHeight(CommentReplyActivity.this);
-            int heightDiff = screenHeight - r.bottom;
-            if(heightDiff>100){
-                //则很能是弹出键盘
-                keyboardHeight = heightDiff;
-            }
-        });
+//        rlParent.getViewTreeObserver().addOnGlobalLayoutListener(() -> {
+//            ToastUtils.shortToast(CommentReplyActivity.this,"haha");
+//            Rect r = new Rect();
+//            rlParent.getWindowVisibleDisplayFrame(r);
+//            LogUtils.d("yaowang","rTop="+r.top);
+//            LogUtils.d("yaowang","rBottom="+r.bottom);
+//            LogUtils.d("yaowang","statusHeight="+ DisplayUtils.getStatusHeight(CommentReplyActivity.this));
+//            LogUtils.d("yaowang","screenHeight="+ DisplayUtils.getDisplayHeight(CommentReplyActivity.this));
+//            int screenHeight = DisplayUtils.getDisplayHeight(CommentReplyActivity.this);
+//            int heightDiff = screenHeight - r.bottom;
+//            if(heightDiff>100){
+//                //则很能是弹出键盘
+//                keyboardHeight = heightDiff;
+//            }
+//        });
 
         KeyboardUtils.setListener(this, new KeyboardUtils.OnKeyboardListener() {
             @Override
             public void onKeyboardShow(int i) {
                 isKeyboardShow = true;
+                keyboardHeight = i;
             }
 
             @Override
