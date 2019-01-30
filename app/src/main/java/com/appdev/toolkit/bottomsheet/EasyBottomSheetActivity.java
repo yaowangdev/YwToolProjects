@@ -1,6 +1,7 @@
-package com.appdev.toolkit;
+package com.appdev.toolkit.bottomsheet;
 
 import com.appdev.common.view.base.BaseActivity;
+import com.appdev.toolkit.R;
 
 /**
  * @author 创建人 ：yaowang

@@ -1,4 +1,4 @@
-package com.appdev.toolkit;
+package com.appdev.toolkit.fragmentdialog;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -11,6 +11,7 @@ import com.appdev.common.lib.toast.ToastUtils;
 import com.appdev.common.lib.ui.KeyboardUtils;
 import com.appdev.common.view.base.BaseActivity;
 import com.appdev.common.view.navigation.TitleBar;
+import com.appdev.toolkit.R;
 
 import static com.appdev.toolkit.MainActivity.MAIN_EXTRA_TITLE;
 

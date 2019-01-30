@@ -1,4 +1,4 @@
-package com.appdev.toolkit;
+package com.appdev.toolkit.fragmentdialog;
 
 /**
  * @author 创建人 ：yaowang

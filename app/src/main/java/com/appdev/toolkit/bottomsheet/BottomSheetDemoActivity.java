@@ -1,4 +1,7 @@
-package com.appdev.toolkit;
+package com.appdev.toolkit.bottomsheet;
+
+import com.appdev.toolkit.DemoActivity;
+import com.appdev.toolkit.MenuItem;
 
 import java.util.List;
 

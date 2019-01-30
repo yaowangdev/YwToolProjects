@@ -5,6 +5,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.appdev.common.view.base.BaseActivity;
+import com.appdev.toolkit.bottomsheet.BottomSheetDemoActivity;
+import com.appdev.toolkit.fragmentdialog.DialogDemoActivity;
 
 import java.util.ArrayList;
 import java.util.List;

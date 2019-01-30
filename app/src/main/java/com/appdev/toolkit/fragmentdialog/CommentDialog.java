@@ -1,4 +1,4 @@
-package com.appdev.toolkit;
+package com.appdev.toolkit.fragmentdialog;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -21,6 +21,7 @@ import android.widget.TextView;
 
 import com.appdev.common.lib.toast.ToastUtils;
 import com.appdev.common.view.base.BaseDialogFragment;
+import com.appdev.toolkit.R;
 
 /**
  * @author 创建人 ：yaowang

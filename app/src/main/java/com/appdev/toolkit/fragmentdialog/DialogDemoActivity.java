@@ -1,4 +1,8 @@
-package com.appdev.toolkit;
+package com.appdev.toolkit.fragmentdialog;
+
+import com.appdev.toolkit.DemoActivity;
+import com.appdev.toolkit.MenuItem;
+import com.appdev.toolkit.fragmentdialog.CommentReplyActivity;
 
 import java.util.List;
 
