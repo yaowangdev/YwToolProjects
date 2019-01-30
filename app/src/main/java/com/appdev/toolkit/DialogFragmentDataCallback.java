@@ -1,7 +1,5 @@
 package com.appdev.toolkit;
 
-import android.view.View;
-
 /**
  * @author 创建人 ：yaowang
  * @version 1.0

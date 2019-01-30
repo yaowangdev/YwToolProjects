@@ -17,11 +17,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DialogDemoActivity"
-            android:screenOrientation="portrait"/>
         <activity android:name=".CommentReplyActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name=".BottomSheetDemoActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".DialogDemoActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".EasyBottomSheetActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

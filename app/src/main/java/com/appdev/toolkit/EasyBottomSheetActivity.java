@@ -1,6 +1,6 @@
 package com.appdev.toolkit;
 
-import java.util.List;
+import com.appdev.common.view.base.BaseActivity;
 
 /**
  * @author 创建人 ：yaowang
@@ -11,11 +11,14 @@ import java.util.List;
  * @modifyTime 修改时间 ：
  * @modifyMemo 修改备注：
  */
-public class DialogDemoActivity extends DemoActivity {
+public class EasyBottomSheetActivity extends BaseActivity {
+    @Override
+    protected int getLayoutView() {
+        return R.layout.activity_easy_bottom_sheet;
+    }
 
     @Override
-    protected List<MenuItem> getData() {
-        mItems.add(new MenuItem(CommentReplyActivity.class,"评论回复"));
-        return mItems;
+    protected void initView() {
+
     }
 }

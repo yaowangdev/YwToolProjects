@@ -19,7 +19,7 @@ import java.util.List;
 public class MenuAdapter extends BaseQuickAdapter<MenuItem,BaseViewHolder> {
 
 
-    public MenuAdapter(int layoutResId, @Nullable List<MenuItem> data) {
+    MenuAdapter(int layoutResId, @Nullable List<MenuItem> data) {
         super(layoutResId, data);
     }
 

@@ -11,11 +11,12 @@ import java.util.List;
  * @modifyTime 修改时间 ：
  * @modifyMemo 修改备注：
  */
-public class DialogDemoActivity extends DemoActivity {
+public class BottomSheetDemoActivity extends DemoActivity {
+
 
     @Override
     protected List<MenuItem> getData() {
-        mItems.add(new MenuItem(CommentReplyActivity.class,"评论回复"));
+        mItems.add(new MenuItem(EasyBottomSheetActivity.class,"BottomSheet简单应用"));
         return mItems;
     }
 }

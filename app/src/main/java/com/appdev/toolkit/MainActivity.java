@@ -1,7 +1,6 @@
 package com.appdev.toolkit;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
@@ -12,14 +11,7 @@ import java.util.List;
 
 public class MainActivity extends BaseActivity {
     public static final String MAIN_EXTRA_TITLE = "extra_title";
-    private RecyclerView mRecyclerView;
-    private MenuAdapter mMenuAdapter;
     private List<MenuItem> mItems = new ArrayList<>();
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
 
     @Override
     protected int getLayoutView() {
@@ -28,9 +20,9 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initView() {
-        mRecyclerView = findViewById(R.id.rv_recyclerView);
+        RecyclerView mRecyclerView = findViewById(R.id.rv_recyclerView);
         mItems = getData();
-        mMenuAdapter = new MenuAdapter(R.layout.item_menu_view,mItems);
+        MenuAdapter mMenuAdapter = new MenuAdapter(R.layout.item_menu_view, mItems);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setAdapter(mMenuAdapter);
@@ -43,6 +35,7 @@ public class MainActivity extends BaseActivity {
 
     private List<MenuItem> getData() {
         mItems.add(new MenuItem(DialogDemoActivity.class,"DialogFragment案例"));
+        mItems.add(new MenuItem(BottomSheetDemoActivity.class,"BottomSheet案例"));
         return mItems;
     }
 }
