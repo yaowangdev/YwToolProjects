@@ -1,1 +1,3 @@
-include ':app', ':yw-common-lib', ':yw-common-view'
+include ':app'
+include ':yw-common-lib'
+include ':yw-common-view'
