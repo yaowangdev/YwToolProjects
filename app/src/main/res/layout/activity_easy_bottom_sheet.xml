@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-</android.support.constraint.ConstraintLayout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/agmobile_background">
+    <com.appdev.common.view.navigation.TitleBar
+        android:id="@+id/titleBar"
+        android:background="@color/agmobile_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:barStyle="centerBar"
+        app:showBack="true"
+        android:elevation="6dp"
+        tools:targetApi="lollipop" />
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/content_main"/>
+        <include layout="@layout/content_bottom_sheet"/>
+    </android.support.design.widget.CoordinatorLayout>
+</LinearLayout>

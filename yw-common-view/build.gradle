@@ -33,6 +33,7 @@ android {
 dependencies {
     api "com.android.support.constraint:constraint-layout:$rootProject.ext.constraintLayoutVersion"
     api "com.android.support:recyclerview-v7:$rootProject.ext.supportLibVersion"
+    api "com.android.support:design:$rootProject.ext.supportLibVersion"
 
     api project(':yw-common-lib')
     api 'com.jakewharton:butterknife:8.8.1'
