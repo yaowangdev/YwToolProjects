@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import com.appdev.common.view.base.BaseActivity;
 import com.appdev.toolkit.bottomsheet.BottomSheetDemoActivity;
 import com.appdev.toolkit.fragmentdialog.DialogDemoActivity;
+import com.appdev.toolkit.popuwindow.PopuwindowDemoActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,6 +39,7 @@ public class MainActivity extends BaseActivity {
     private List<MenuItem> getData() {
         mItems.add(new MenuItem(DialogDemoActivity.class,"DialogFragment案例"));
         mItems.add(new MenuItem(BottomSheetDemoActivity.class,"BottomSheet案例"));
+        mItems.add(new MenuItem(PopuwindowDemoActivity.class,"popuwindow案例"));
         return mItems;
     }
 }

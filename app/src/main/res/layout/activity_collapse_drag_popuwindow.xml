@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/agmobile_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <com.appdev.common.view.navigation.TitleBar
+        android:background="@color/agmobile_white"
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:barStyle="centerBar"
+        app:showBack="true"
+        android:elevation="6dp"
+        tools:targetApi="lollipop" />
+
+
+</RelativeLayout>

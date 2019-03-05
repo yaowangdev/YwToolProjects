@@ -26,6 +26,10 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".bottomsheet.EasyBottomSheetActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".popuwindow.CollapseDragPopuwindowActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".popuwindow.PopuwindowDemoActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
