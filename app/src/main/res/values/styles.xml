@@ -8,4 +8,9 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="AnimTransitionRight">
+        <item name="android:windowEnterAnimation">@anim/anim_view_right_in</item>
+        <item name="android:windowExitAnimation">@anim/anim_view_right_out</item>
+    </style>
+
 </resources>

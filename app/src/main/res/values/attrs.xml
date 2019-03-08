@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CollapseDragView">
+        <attr name="outShowSize" format="integer"/>
+        <attr name="gridColumns" format="integer"/>
+    </declare-styleable>
+</resources>

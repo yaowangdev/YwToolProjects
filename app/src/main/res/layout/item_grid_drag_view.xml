@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rl_img_content"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/drag_item_view_drawable"
+        android:elevation="4dp"
+        >
+
+        <ImageView
+            android:id="@+id/iv_img"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/ic_launcher"
+            />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/agmobile_black"
+        android:textSize="10sp"
+        android:text="实时公交"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="8dp"
+        />
+</LinearLayout>

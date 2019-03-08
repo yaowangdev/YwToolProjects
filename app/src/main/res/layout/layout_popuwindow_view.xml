@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/drag_background_drawable"
+    android:descendantFocusability="blocksDescendants">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_recyclerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:overScrollMode="never"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="长按拖拽可以排序"
+        android:layout_below="@+id/rv_recyclerView"
+        android:textSize="10sp"
+        android:textColor="@color/agmobile_grey_0"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        />
+</RelativeLayout>

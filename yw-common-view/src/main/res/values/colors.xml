@@ -61,6 +61,11 @@
     <!--网格卡片布局下的背景色-->
     <color name="agmobile_background_grid">#f8f8f8</color>
 
+    <color name="agmobile_background0">#eef0f0f0</color>
+    <color name="agmobile_background1">#e6e6e6</color>
+    <color name="agmobile_background2">#d5d5d5</color>
+    <color name="agmobile_background3">#cccccc</color>
+
     <!--按钮-->
     <!--主要按钮背景及描边-->
     <!--填充色正常状态-->
