@@ -20,7 +20,9 @@
     <!--亮灰色，用于分割线、描边、输入框提示文字-->
     <color name="agmobile_grey_0">#d3d3d3</color>               <!--193,193,193-->
     <!--暗灰色，用于搜索框描边、搜索输入框文字-->
-    <color name="agmobile_grey_2">#4b4b4b</color>               <!--75,75,75-->
+    <color name="agmobile_grey_2">#4b4b4b</color>
+    <!--75,75,75-->
+    <color name="agmobile_grey_3">#808080</color>               <!--75,75,75-->
     <!--↑↑↑↑↑↑Deprecated 需要逐渐替换↑↑↑↑↑↑-->
 
     <!--主色调，如标题栏-->

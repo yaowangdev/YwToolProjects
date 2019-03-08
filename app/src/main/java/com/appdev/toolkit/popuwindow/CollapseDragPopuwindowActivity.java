@@ -1,9 +1,11 @@
 package com.appdev.toolkit.popuwindow;
 
+import android.graphics.Color;
 import android.view.View;
 
 import com.appdev.common.view.base.BaseActivity;
 import com.appdev.common.view.navigation.TitleBar;
+import com.appdev.toolkit.MenuItem;
 import com.appdev.toolkit.R;
 
 import java.util.ArrayList;
@@ -14,6 +16,7 @@ import static com.appdev.toolkit.MainActivity.MAIN_EXTRA_TITLE;
 public class CollapseDragPopuwindowActivity extends BaseActivity {
     private TitleBar mTitleBar;
     private CollapseDragView collapseDragView;
+    private CustomToolBar customToolBar;
 
     @Override
     protected int getLayoutView() {
@@ -23,6 +26,7 @@ public class CollapseDragPopuwindowActivity extends BaseActivity {
     @Override
     protected void initView() {
         mTitleBar = findViewById(R.id.titleBar);
+        customToolBar = findViewById(R.id.ctb_toolbar);
         mTitleBar.setTitleText(mIntent.getStringExtra(MAIN_EXTRA_TITLE));
         collapseDragView = findViewById(R.id.cdv_view);
         initData();
@@ -57,5 +61,18 @@ public class CollapseDragPopuwindowActivity extends BaseActivity {
         actionModels.add(actionModel4);
         actionModels.add(actionModel5);
         collapseDragView.setActionList(actionModels);
+
+        /********************************************************/
+
+        customToolBar.showBack();
+        customToolBar.showClose(true);
+        customToolBar.setHint("Hello");
+        customToolBar.setHintColor(getResources().getColor(R.color.agmobile_black));
+        MenuItem menuItem = new MenuItem();
+        menuItem.setIconRes(R.drawable.icon_voice);
+        menuItem.setTitle("voice");
+        customToolBar.addMenu(menuItem);
+
+
     }
 }
