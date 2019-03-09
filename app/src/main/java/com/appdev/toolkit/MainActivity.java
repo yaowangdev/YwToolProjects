@@ -6,6 +6,8 @@ import android.support.v7.widget.RecyclerView;
 
 import com.appdev.common.view.base.BaseActivity;
 import com.appdev.toolkit.bottomsheet.BottomSheetDemoActivity;
+import com.appdev.toolkit.coordinatorlayout.CoordinatorLayoutDemoActivity;
+import com.appdev.toolkit.coordinatorlayout.EazyCoordinatorLayoutActivity;
 import com.appdev.toolkit.fragmentdialog.DialogDemoActivity;
 import com.appdev.toolkit.popuwindow.PopuwindowDemoActivity;
 
@@ -40,6 +42,7 @@ public class MainActivity extends BaseActivity {
         mItems.add(new MenuItem(DialogDemoActivity.class,"DialogFragment案例"));
         mItems.add(new MenuItem(BottomSheetDemoActivity.class,"BottomSheet案例"));
         mItems.add(new MenuItem(PopuwindowDemoActivity.class,"popuwindow案例"));
+        mItems.add(new MenuItem(CoordinatorLayoutDemoActivity.class,"CoordinatorLayout案例"));
         return mItems;
     }
 }

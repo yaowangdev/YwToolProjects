@@ -31,6 +31,10 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".popuwindow.PopuwindowDemoActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".coordinatorlayout.CoordinatorLayoutDemoActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".coordinatorlayout.EazyCoordinatorLayoutActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

@@ -88,6 +88,7 @@ public class EasyBottomSheetActivity extends BaseActivity implements View.OnClic
 
             @Override
             public void onSlide(@NonNull View bottomSheet, float slideOffset) {
+                Log.d("yaowang",slideOffset+"");
 
             }
         });
