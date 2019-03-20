@@ -114,6 +114,19 @@ public class CollapseDragView extends LinearLayout {
         mItemTouchHelper = new ItemTouchHelper(mItemDragAndSwipeCallback);
         mItemTouchHelper.attachToRecyclerView(popuRecyclerView);
         gridDragAdapter.enableDragItem(mItemTouchHelper);
+
+        gridDragAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                if(mlistener!=null){
+                    mlistener.OnCollapseDragViewItemClick((ActionModel)adapter.getData().get(position),view,position);
+                }
+                if(mPopup!=null && mPopup.isShowing()){
+                    mPopup.dismiss();
+                }
+            }
+        });
+
         gridDragAdapter.setOnItemDragListener(new OnItemDragListener() {
             @Override
             public void onItemDragStart(RecyclerView.ViewHolder viewHolder, int pos) {

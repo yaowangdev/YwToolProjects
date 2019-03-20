@@ -28,7 +28,7 @@ import java.util.List;
  * @modifyTime 修改时间 ：
  * @modifyMemo 修改备注：
  */
-public class CustomToolBar extends RelativeLayout implements View.OnClickListener, BaseQuickAdapter.OnItemClickListener {
+public class PhoneToolBar extends RelativeLayout implements View.OnClickListener, BaseQuickAdapter.OnItemClickListener,IToolBar {
     private Context mContext;
     private LayoutInflater mInflater;
     private RelativeLayout rlHamburger;
@@ -49,15 +49,15 @@ public class CustomToolBar extends RelativeLayout implements View.OnClickListene
     @ToolState
     private int toolState = ToolState.HEAD;
 
-    public CustomToolBar(Context context) {
+    public PhoneToolBar(Context context) {
         this(context,null);
     }
 
-    public CustomToolBar(Context context, AttributeSet attrs) {
+    public PhoneToolBar(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public CustomToolBar(Context context, AttributeSet attrs, int defStyleAttr) {
+    public PhoneToolBar(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         mContext = context;
         mInflater = LayoutInflater.from(mContext);
@@ -126,6 +126,7 @@ public class CustomToolBar extends RelativeLayout implements View.OnClickListene
      * 添加菜单
      * @param menuItem
      */
+    @Override
     public void addMenu(MenuItem menuItem){
         menuItems.add(menuItem);
         menuAdapter.setNewData(menuItems);
@@ -135,6 +136,7 @@ public class CustomToolBar extends RelativeLayout implements View.OnClickListene
      * 根据菜单名移除菜单
      * @param menuName
      */
+    @Override
     public void removeMenu(String menuName){
         Iterator<MenuItem> iterator = menuItems.iterator();
         while (iterator.hasNext()){
@@ -150,7 +152,8 @@ public class CustomToolBar extends RelativeLayout implements View.OnClickListene
      * 设置ToolBar内容
      * @param hint
      */
-    public void setHint(String hint){
+    @Override
+    public void setContent(String hint){
         tvInput.setText(hint);
     }
 
@@ -158,13 +161,15 @@ public class CustomToolBar extends RelativeLayout implements View.OnClickListene
      * 设置ToolBar内容颜色
      * @param color
      */
-    public void setHintColor(int color){
+    @Override
+    public void setContentColor(int color){
         tvInput.setTextColor(color);
     }
 
     /**
      * 显示头像图标
      */
+    @Override
     public void showHamburger(){
         ivHead.setVisibility(VISIBLE);
         ivBack.setVisibility(GONE);
@@ -173,6 +178,7 @@ public class CustomToolBar extends RelativeLayout implements View.OnClickListene
     /**
      * 显示返回图标
      */
+    @Override
     public void showBack(){
         ivHead.setVisibility(GONE);
         ivBack.setVisibility(VISIBLE);
@@ -182,6 +188,7 @@ public class CustomToolBar extends RelativeLayout implements View.OnClickListene
      * 是否显示关闭按钮
      * @param show
      */
+    @Override
     public void showClose(boolean show){
         ivClose.setVisibility(show?VISIBLE:GONE);
         vLine.setVisibility(show?VISIBLE:GONE);
@@ -191,17 +198,24 @@ public class CustomToolBar extends RelativeLayout implements View.OnClickListene
      * 是否显示右边菜单
      * @param show
      */
+    @Override
     public void showMenus(boolean show){
         mRecyclerView.setVisibility(show?VISIBLE:GONE);
     }
 
-//    /**
-//     * 设置Toolbar状态
-//     * @param toolState
-//     */
-//    public void setToolState(@ToolState int toolState){
-//        this.toolState = toolState;
-//    }
+    /**
+     * 设置Toolbar状态
+     * @param toolState
+     */
+    @Override
+    public void setToolState(@ToolState int toolState){
+        this.toolState = toolState;
+        if(toolState==ToolState.HEAD){
+            showHamburger();
+        }else if(toolState==ToolState.BACK){
+            showBack();
+        }
+    }
 
     /**
      * 开关回调
@@ -230,7 +244,8 @@ public class CustomToolBar extends RelativeLayout implements View.OnClickListene
     /**
      * 开关头像
      */
-    private void toggleHamburger(){
+    @Override
+    public void toggleHamburger(){
         if(toggleListener!=null){
             toggleListener.toggle();
         }
@@ -239,7 +254,8 @@ public class CustomToolBar extends RelativeLayout implements View.OnClickListene
     /**
      * 回上一状态
      */
-    private void goBack() {
+    @Override
+    public void goBack() {
         if(backClickListener!=null){
             backClickListener.back();
         }
