@@ -16,6 +16,7 @@
             <enum name="centerBar" value="1"/>
             <enum name="leftBar" value="2"/>
         </attr>
+        <attr name="immersiveStatusBar" format="boolean"/>
     </declare-styleable>
 
 </resources>

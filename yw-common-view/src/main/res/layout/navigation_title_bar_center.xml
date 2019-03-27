@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:minHeight="@dimen/agmobile_tool_bar_height"
-    android:fitsSystemWindows="true"
+    android:fitsSystemWindows="false"
+    android:orientation="vertical"
     android:background="@color/agmobile_primary">
+    <View
+        android:id="@+id/view_place_holder"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/agmobile_primary"/>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/agmobile_tool_bar_height">
@@ -85,4 +90,4 @@
                 android:textColor="@color/agmobile_text_title_bar"/>
         </LinearLayout>
     </RelativeLayout>
-</RelativeLayout>
+</LinearLayout>

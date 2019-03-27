@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         app:barStyle="centerBar"
         app:showBack="true"
+        app:immersiveStatusBar="true"
         android:elevation="6dp"
         tools:targetApi="lollipop" />
     <android.support.design.widget.CoordinatorLayout

@@ -16,7 +16,8 @@
         app:showMore="false"
         app:showBack="false"
         android:elevation="6dp"
-        tools:targetApi="lollipop" />
+        tools:targetApi="lollipop"
+        app:immersiveStatusBar="true" />
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_recyclerView"
         android:layout_width="match_parent"

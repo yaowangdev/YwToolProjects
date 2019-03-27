@@ -35,6 +35,14 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".coordinatorlayout.EazyCoordinatorLayoutActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".keyboardswitch.KeyboardSwitchDemoActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".keyboardswitch.KeyboardSwitchActivity1"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity android:name=".keyboardswitch.KeyboardSwitchActivity2"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
     </application>
 
 </manifest>

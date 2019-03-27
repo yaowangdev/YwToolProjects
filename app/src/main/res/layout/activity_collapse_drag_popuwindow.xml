@@ -12,9 +12,9 @@
         android:layout_height="wrap_content"
         app:barStyle="centerBar"
         app:showBack="true"
+        app:immersiveStatusBar="true"
         android:elevation="6dp"
         tools:targetApi="lollipop" />
-
     <com.appdev.toolkit.popuwindow.PhoneToolBar
         android:id="@+id/ctb_toolbar"
         android:layout_width="wrap_content"
@@ -24,8 +24,6 @@
         android:background="@drawable/collapse_drag_view_drawable"
         android:layout_margin="8dp"
         />
-
-
     <com.appdev.toolkit.popuwindow.CollapseDragView
         android:id="@+id/cdv_view"
         android:layout_width="wrap_content"
@@ -35,6 +33,4 @@
         android:layout_alignParentRight="true"
         android:layout_marginRight="30dp"
         android:elevation="3dp"/>
-
-
 </RelativeLayout>

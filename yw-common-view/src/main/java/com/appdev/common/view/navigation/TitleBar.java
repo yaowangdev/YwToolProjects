@@ -6,11 +6,13 @@ import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.appdev.common.lib.ui.DisplayUtils;
 import com.appdev.common.view.R;
 
 /**
@@ -44,6 +46,8 @@ public class TitleBar extends RelativeLayout {
     private LinearLayout llBackBtn;
     private LinearLayout llMoreBtn;
 
+    protected boolean immersiveStatusBar = false;
+
     public TitleBar(Context context) {
         this(context,null);
     }
@@ -68,6 +72,7 @@ public class TitleBar extends RelativeLayout {
             mShowMore = ta.getBoolean(R.styleable.TitleBar_showMore,true);
             mShowViewBar = ta.getBoolean(R.styleable.TitleBar_showViewBar,false);
             mBarStyle = ta.getInt(R.styleable.TitleBar_barStyle,1);
+            immersiveStatusBar = ta.getBoolean(R.styleable.TitleBar_immersiveStatusBar, false);
             if(mBarStyle==1){
                 LayoutInflater.from(context).inflate(R.layout.navigation_title_bar_center,this);
             }else if(mBarStyle==2){
@@ -114,6 +119,17 @@ public class TitleBar extends RelativeLayout {
         }
 
         llBackBtn.setOnClickListener(v -> goBack());
+        setImmersiveStatusBar(immersiveStatusBar);//设置沉浸式
+    }
+
+    private void setImmersiveStatusBar(boolean immersiveStatusBar) {
+        if (immersiveStatusBar) {
+            View placeholder = findViewById(R.id.view_place_holder);
+            int statusHeight = DisplayUtils.getStatusHeight(getContext());
+            ViewGroup.LayoutParams layoutParams = placeholder.getLayoutParams();
+            layoutParams.height = statusHeight;
+            placeholder.setLayoutParams(layoutParams);
+        }
     }
 
     /**

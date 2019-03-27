@@ -11,6 +11,7 @@
         android:layout_height="wrap_content"
         app:barStyle="centerBar"
         app:showBack="true"
+        app:immersiveStatusBar="true"
         android:background="@color/agmobile_white"
         android:elevation="6dp"
         tools:targetApi="lollipop" />

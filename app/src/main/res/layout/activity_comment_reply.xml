@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:barStyle="centerBar"
+        app:immersiveStatusBar="true"
         app:showBack="true"
         android:elevation="6dp"
         tools:targetApi="lollipop" />
