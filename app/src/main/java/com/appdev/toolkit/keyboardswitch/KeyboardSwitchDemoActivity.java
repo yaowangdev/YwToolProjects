@@ -18,6 +18,7 @@ public class KeyboardSwitchDemoActivity extends DemoActivity {
     @Override
     protected List<MenuItem> getData() {
         mItems.add(new MenuItem(KeyboardSwitchActivity1.class,"键盘切换1"));
+        mItems.add(new MenuItem(KeyboardSwitchActivity2.class,"键盘切换2"));
         return mItems;
     }
 }

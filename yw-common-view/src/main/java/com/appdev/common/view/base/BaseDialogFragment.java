@@ -46,7 +46,7 @@ public abstract class BaseDialogFragment extends DialogFragment {
     private boolean isCancelable = true;
     private boolean openCustom = false;
 
-    private Dialog mDialog;
+    public Dialog mDialog;
 
     protected static Bundle getArgumentBundle(Builder b) {
         Bundle bundle = new Bundle();

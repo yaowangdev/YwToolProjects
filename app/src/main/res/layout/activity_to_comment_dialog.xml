@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <View
+        android:id="@+id/v_content_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+    <include layout="@layout/view_input"/>
+    <LinearLayout
+        android:id="@+id/ll_rootEmojiPanel"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#d5d3d5" />
+
+        <LinearLayout
+            android:id="@+id/panel_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="15dp"
+                android:textSize="15sp"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:drawableTop="@drawable/icon_file"
+                android:text="文件" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="15dp"
+                android:textSize="15sp"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:drawableTop="@drawable/icon_photo"
+                android:text="拍照" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

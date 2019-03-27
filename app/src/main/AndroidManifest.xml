@@ -43,6 +43,9 @@
         <activity android:name=".keyboardswitch.KeyboardSwitchActivity2"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity android:name=".keyboardswitch.ToCommentDialogActivity"
+            android:theme="@style/DialogTransparent"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
     </application>
 
 </manifest>
