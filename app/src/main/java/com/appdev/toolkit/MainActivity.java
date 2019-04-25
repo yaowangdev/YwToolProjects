@@ -10,6 +10,7 @@ import com.appdev.toolkit.coordinatorlayout.CoordinatorLayoutDemoActivity;
 import com.appdev.toolkit.coordinatorlayout.EazyCoordinatorLayoutActivity;
 import com.appdev.toolkit.fragmentdialog.DialogDemoActivity;
 import com.appdev.toolkit.keyboardswitch.KeyboardSwitchDemoActivity;
+import com.appdev.toolkit.nestscroll.NestScrollDemoActivity;
 import com.appdev.toolkit.popuwindow.PopuwindowDemoActivity;
 
 import java.util.ArrayList;
@@ -45,6 +46,7 @@ public class MainActivity extends BaseActivity {
         mItems.add(new MenuItem(PopuwindowDemoActivity.class,"popuwindow案例"));
         mItems.add(new MenuItem(CoordinatorLayoutDemoActivity.class,"CoordinatorLayout案例"));
         mItems.add(new MenuItem(KeyboardSwitchDemoActivity.class,"键盘切换案例"));
+        mItems.add(new MenuItem(NestScrollDemoActivity.class,"NestScroll案例"));
         return mItems;
     }
 }

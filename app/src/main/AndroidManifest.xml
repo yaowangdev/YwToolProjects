@@ -44,8 +44,12 @@
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
         <activity android:name=".keyboardswitch.ToCommentDialogActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/DialogTransparent"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity android:name=".nestscroll.NestScrollDemoActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".nestscroll.StickyLayoutActivity" />
     </application>
 
 </manifest>
