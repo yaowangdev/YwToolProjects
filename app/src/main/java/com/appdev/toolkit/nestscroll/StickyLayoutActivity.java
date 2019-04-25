@@ -114,6 +114,7 @@ public class StickyLayoutActivity extends BaseActivity {
                 });
                 viewpager.setAdapter(fragmentPagerAdapter);
                 viewpager.setCurrentItem(0);
+                viewpager.setOffscreenPageLimit(3);
                 pageSelected(viewpager,0);
             }
 
